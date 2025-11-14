@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIJO - Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <header>
+        <div class="logo">SJ</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О клане</a></li>
+                <li><a href="roster.html">Состав</a></li>
+                <li><a href="achievements.html">Достижения</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1 data-lang-ru="Связь с кланом SIJO" data-lang-en="Contact SIJO Clan">Связь с кланом SIJO</h1>
+            <p data-lang-ru="Заполните форму, чтобы подать заявку на вступление в клан." data-lang-en="Fill out the form to apply to join the clan.">Заполните форму, чтобы подать заявку на вступление в клан.</p>
+
+            <form id="joinForm">
+                <label for="playerName" data-lang-ru="Имя игрока" data-lang-en="Player Name">Имя игрока</label>
+                <input type="text" id="playerName" name="playerName" required>
+
+                <label for="playerAge" data-lang-ru="Возраст" data-lang-en="Age">Возраст</label>
+                <input type="number" id="playerAge" name="playerAge" required>
+
+                <label for="playerLvl" data-lang-ru="Уровень" data-lang-en="Level">Уровень</label>
+                <input type="number" id="playerLvl" name="playerLvl" required>
+
+                <label for="playerMessage" data-lang-ru="Сообщение" data-lang-en="Message">Сообщение</label>
+                <textarea id="playerMessage" name="playerMessage" rows="4" placeholder="Привет, хочу вступить в клан / Hi, I want to join the clan" required></textarea>
+
+                <button type="submit" data-lang-ru="Отправить заявку" data-lang-en="Send Application">Отправить заявку</button>
+            </form>
+
+            <p id="formStatus"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SIJO. Все права защищены.</p>
+        <div class="socials">
+            <a href="mailto:sijo.standoff@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+        // Отправка формы на email через mailto (клиентская версия)
+        document.getElementById('joinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('playerName').value;
+            const age = document.getElementById('playerAge').value;
+            const lvl = document.getElementById('playerLvl').value;
+            const message = document.getElementById('playerMessage').value;
+
+            const subject = encodeURIComponent("Заявка на вступление в клан SIJO / Clan Join Request");
+            const body = encodeURIComponent(`PlayerName=${name}\nPlayerAge=${age}\nPlayerLvl=${lvl}\nPlayerMessage=${message}`);
+
+            window.location.href = `mailto:sijo.standoff@gmail.com?subject=${subject}&body=${body}`;
+
+            document.getElementById('formStatus').textContent = "Заявка открыта в вашем почтовом клиенте. / Application opened in your email client.";
+        });
+    </script>
+</body>
+</html>
