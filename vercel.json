@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/about.html", "destination": "/about.html" },
+    { "source": "/roster.html", "destination": "/roster.html" },
+    { "source": "/achievements.html", "destination": "/achievements.html" },
+    { "source": "/contact.html", "destination": "/contact.html" },
+    { "source": "/faq.html", "destination": "/faq.html" }
+  ]
+}
