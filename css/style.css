@@ -1,0 +1,226 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a, #001100);
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Ссылки */
+a {
+    color: #00ff66;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff66;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+    border: 2px solid #00ff66;
+}
+
+/* Гамбургер */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #00ff66;
+    transition: 0.3s;
+}
+
+/* Hero секция */
+.hero {
+    text-align: center;
+    padding: 100px 20px 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background: none;
+    color: #00ff66;
+    border: 2px solid #00ff66;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background-color: #00ff66;
+    color: #0a0a0a;
+}
+
+/* Карточки (Roster / Achievements / Features) */
+.player-card, .feature-card, .achievement-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00ff66;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover, .feature-card:hover, .achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00ff66;
+}
+
+/* Сетки */
+.players-grid, .achievements-grid, .clan-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Контакты */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #00ff66;
+    background-color: rgba(0,0,0,0.6);
+    color: #e0e0e0;
+    transition: 0.3s;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ff66;
+}
+
+.contact-section button:hover {
+    background-color: #00ff66;
+    color: #0a0a0a;
+    cursor: pointer;
+}
+
+/* FAQ */
+.faq-item {
+    margin: 15px 0;
+    border: 2px solid #00ff66;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color: #00ff66;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    padding: 15px;
+    color: #e0e0e0;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.8);
+    margin-top: 50px;
+}
+
+footer .socials a {
+    color: #00ff66;
+    margin: 0 10px;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    border: 2px solid #00ff66;
+    padding: 8px 20px;
+    border-radius: 8px;
+    color: #00ff66;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #00ff66;
+    color: #0a0a0a;
+}
+
+/* Анимация при наведении на карточки */
+.player-card, .feature-card, .achievement-card {
+    transition: all 0.3s ease;
+}
+
+/* Адаптивный контейнер */
+section {
+    padding: 50px 20px;
+}
