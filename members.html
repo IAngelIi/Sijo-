@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SIJO — Участники</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="site">
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">SIJO</div>
+      <div class="clan-id">[idkfj]</div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О клане</a>
+      <a href="achievements.html">Достижения</a>
+      <a href="members.html" class="active">Участники</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger4" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="page container">
+    <h2 class="page-title">Участники</h2>
+    <p class="muted">Кликните по карточке для неонового эффекта. Кликом по роли вы переключаете градиент ника лидера.</p>
+
+    <section class="members-grid" id="membersGrid">
+      <!-- Owner -->
+      <div class="member-card owner" data-role="owner" data-gradient="linear-gradient(90deg,#ffffff,#d6d8d8,#9b9b9b,#646464,#1a1a1a)">
+        <div class="avatar">D</div>
+        <div class="meta">
+          <div class="name fancy">ɴɪᴋꜱ ᴀɴᴅ ᴢᴀɢᴏʟᴏᴠᴋɪʏ</div>
+          <div class="nick">Diego</div>
+          <div class="role">Leader</div>
+        </div>
+      </div>
+
+      <!-- Co-owner -->
+      <div class="member-card" data-role="coowner" data-gradient="linear-gradient(90deg,#4b6cb7,#182848)">
+        <div class="avatar">Z</div>
+        <div class="meta">
+          <div class="name fancy">zazzo</div>
+          <div class="nick">zazzo</div>
+          <div class="role">Co-Owner</div>
+        </div>
+      </div>
+
+      <!-- Elders -->
+      <div class="member-card" data-role="elder" data-gradient="linear-gradient(90deg,#dc2424,#4a569d)">
+        <div class="avatar">E</div>
+        <div class="meta">
+          <div class="name fancy">vakanto</div>
+          <div class="nick">vakanto</div>
+          <div class="role">Elder</div>
+        </div>
+      </div>
+
+      <div class="member-card" data-role="elder" data-gradient="linear-gradient(90deg,#dc2424,#4a569d)">
+        <div class="avatar">E</div>
+        <div class="meta">
+          <div class="name fancy">vakanto</div>
+          <div class="nick">vakanto</div>
+          <div class="role">Elder</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="members-grid" id="membersGrid2">
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>© SIJO Clan</small>
+  </footer>
+
+  <script src="assets/script.js"></script>
+  <script>
+    // generate 10 member placeholders
+    const target = document.getElementById('membersGrid2');
+    for (let i=1;i<=10;i++){
+      const card = document.createElement('div');
+      card.className = 'member-card';
+      card.setAttribute('data-role','member');
+      card.setAttribute('data-gradient','linear-gradient(90deg,#603813,#b29f94)');
+      card.innerHTML = `<div class="avatar">M${i}</div>
+        <div class="meta">
+          <div class="name fancy">member${i}</div>
+          <div class="nick">member${i}</div>
+          <div class="role">Member</div>
+        </div>`;
+      target.appendChild(card);
+    }
+  </script>
+</body>
+</html>
