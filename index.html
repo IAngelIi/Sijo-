@@ -1,53 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SIJO — Главная</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        img {
+            width: 220px;
+            height: 220px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+    </style>
 </head>
-<body class="site">
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">SIJO</div>
-      <div class="clan-id">[idkfj]</div>
+
+<body>
+
+    <div class="container">
+        <h1>Сканируй QR</h1>
+
+        <a href='https://me-qr.com' style='cursor:pointer;display:block'>
+            <img src='https://storage3.me-qr.com/qr/323563719.png?v=1774038209' alt='QR Code'>
+        </a>
+
+        <a href='https://me-qr.com' style='display:none'>Create qr code for free</a>
     </div>
 
-    <nav class="nav" id="nav">
-      <a href="index.html" class="active">Главная</a>
-      <a href="about.html">О клане</a>
-      <a href="achievements.html">Достижения</a>
-      <a href="members.html">Участники</a>
-    </nav>
-
-    <button class="hamburger" id="hamburger" aria-label="menu">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <main class="hero">
-    <div class="hero-inner">
-      <h1 class="main-title"><span class="highlight">SIJO</span> Clan — Standoff</h1>
-      <p class="lead">Клан SIJO — стильный темный дизайн, плавные анимации и неоновые карточки участников.</p>
-
-      <a class="cta" href="members.html">Посмотреть участников</a>
-
-      <div class="owner-card" id="ownerCard">
-        <div class="owner-avatar">D</div>
-        <div class="owner-info">
-          <div class="owner-role">Leader</div>
-          <div class="owner-name" id="ownerName">Diego</div>
-          <div class="owner-sub">Ушедший на 8 месяцев, вернулся 5 декабря 2025</div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <small>© SIJO Clan</small>
-  </footer>
-
-  <script src="assets/script.js"></script>
 </body>
 </html>
